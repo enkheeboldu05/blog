@@ -11,7 +11,7 @@ void text_to_binary(const char *text) {
 }
 
 int main() {
-    const char *text_input = "MYLOVE";
+    const char *text_input = "MYLOVEISONLYME";
     
     printf("Text: %s\n", text_input);
     printf("Binary: ");
