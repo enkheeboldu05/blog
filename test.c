@@ -1,28 +1,21 @@
 #include <stdio.h>
 
-int main(){
- int i;
- int rows = 10;
- for(i==0; i <= 0; i++){
- for(int i = 0; i < rows; i++){
-		
-		for(int j = 0; j <= i; j++){
-			printf("# ");
-		}
-		printf("\n");
-		}
-	
-		
-	int test = 10;
-	
-	for(int i = 0; i < test; i++){
-		
-		for(int j = 0; j <=  test -i; j++ ){
-			printf("# ");
-		}
-		printf("\n");
-		}
- }
- 
-	return 0;
+void text_to_binary(const char *text) {
+    while (*text) {
+        for (int i = 7; i >= 0; i--) {
+            printf("%d", (*text >> i) & 1);
+        }
+        printf(" test");  // Add a space between each 8-bit representation
+        text++;
+    }
+}
+
+int main() {
+    const char *text_input = "MYLOVE";
+    
+    printf("Text: %s\n", text_input);
+    printf("Binary: ");
+    text_to_binary(text_input);
+
+    return 0;
 }
